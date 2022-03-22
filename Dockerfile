@@ -1,7 +1,9 @@
 FROM node:latest
 
-# Install CDK.
+RUN sudo apt update && sudo apt upgrade -y
+
+# Install CDK
 RUN npm install -g aws-cdk
 
-# Install Java.
-RUN apk add openjdk11 
+# Install Java
+RUN apt-get install openjdk-11-jdk 
