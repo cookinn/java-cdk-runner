@@ -6,4 +6,4 @@ RUN apt update && apt upgrade -y
 RUN npm install -g aws-cdk
 
 # Install Java
-RUN apt-get install openjdk-11-jdk -y 
+RUN apt-get install openjdk-11-jdk -y && apt-get install mvn -y 
