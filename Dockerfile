@@ -6,8 +6,7 @@ RUN apt update && apt upgrade -y
 RUN npm install -g aws-cdk
 
 # Install AWS CLI
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
-./aws/install
+apt-get install awscli
 
 # Install Java
 RUN apt-get install openjdk-11-jdk -y && apt-get install maven -y 
