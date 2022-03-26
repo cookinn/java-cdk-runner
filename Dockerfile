@@ -2,6 +2,9 @@ FROM node:latest
 
 RUN apt update && apt upgrade -y
 
+# Install AppArmor. This is required by the containers.
+RUN apt install apparmor
+
 # Install CDK
 RUN npm install -g aws-cdk
 
