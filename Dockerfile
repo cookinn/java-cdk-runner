@@ -2,11 +2,11 @@ FROM node:latest
 
 RUN apt update && apt upgrade -y
 
-# Install CDK
-RUN npm install -g aws-cdk
+# Install AWS CDK and CLI
+RUN npm install -g aws-cdk && apt-get install awscli -y
 
-# Install AWS CLI
-RUN apt-get install awscli -y
+# Install Git and Bash
+RUN apt-get install git -y && apt-get install bash -y
 
 # Install Java
 RUN apt-get install openjdk-11-jdk -y && apt-get install maven -y
